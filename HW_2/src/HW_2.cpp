@@ -57,5 +57,8 @@ int prob_2(void){
 	Pizza p1; // Making a premade pizza for quick order
 	std::cout << "Price for quick order pizza, type: " << p1.getType() << ", size: " << p1.getSize() << ", number of Toppings: " << p1.get_num_Toppings() << std::endl;
 	std::cout << "Price: " << p1.getPrice();
+	Pizza p2("thick crust", "large", 6);
+	std::cout << std::endl;
+	std::cout << "Next pizza order was a... " << p2.getType() << ", size: " << p2.getSize() << ", number of toppings: " << p2.get_num_Toppings() << std::endl;
 	return(0);
 }
