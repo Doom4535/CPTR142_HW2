@@ -7,11 +7,14 @@
 //============================================================================
 
 #include <iostream>
+#include <vector>
 #include "odometer.h"
 #include "pizza.h"
 
 int prob_1(void); // #6
 int prob_2(void); // #7
+
+using namespace std;
 
 int main() {
 	std::cout << "!!!Hello World!!!" << std::endl; // prints !!!Hello World!!!
@@ -21,33 +24,44 @@ int main() {
 }
 
 int prob_1(void){
-	Odometer car1(0, 20, 0);
+	// Two test trip objects
+	Odometer trip1, trip2;
+
+	vector<Odometer> trips;
+	trips.push_back(trip1);
+	trips.push_back(trip2);
+
+	trips[0].resetOdometer();
+	trips[0].setMPG(20);
+	//trips[0].addOdometer(100);
+
 	std::cout << "Trip 1: Going to store" << std::endl;
-	car1.addOdometer(20);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[0].addOdometer(20);
+	std::cout << "Total fuel used so far: " << trips[0].getFuel_consumed() << " gallons" << std::endl;
 	std::cout << "Trip 2: Going to Jim's" << std::endl;
-	car1.addOdometer(12);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[0].addOdometer(12);
+	std::cout << "Total fuel used so far: " << trips[0].getFuel_consumed() << " gallons" << std::endl;
 	std::cout << "Trip 3: Pick up Becca:" << std::endl;
-	car1.addOdometer(8);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[0].addOdometer(8);
+	std::cout << "Total fuel used so far: " << trips[0].getFuel_consumed() << " gallons" << std::endl;
 	std::cout << "Trip 4: Going to shop: " << std::endl;
-	car1.addOdometer(15);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
-	car1.resetOdometer();
+	trips[0].addOdometer(15);
+	std::cout << "Total fuel used so far: " << trips[0].getFuel_consumed() << " gallons" << std::endl;
+
+	trips[1].resetOdometer();
 	std::cout << "Car repaired, Odometer reset" << std::endl;
 	std::cout << "Preparing for cross country trip: " << std::endl;
-	car1.setMPG(18);
-	car1.addOdometer(1500);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[1].setMPG(18);
+	trips[1].addOdometer(1500);
+	std::cout << "Total fuel used so far: " << trips[1].getFuel_consumed() << " gallons" << std::endl;
 	std::cout << "Entering mountainous region, MPG lower" << std::endl;
-	car1.changeMPG(14);
-	car1.addOdometer(500);
-	std::cout << "Total fuel used so far: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[1].changeMPG(14);
+	trips[1].addOdometer(500);
+	std::cout << "Total fuel used so far: " << trips[1].getFuel_consumed() << " gallons" << std::endl;
 	std::cout << "Leaving mountainous region, MPG higher" << std::endl;
-	car1.changeMPG(18);
-	car1.addOdometer(2200);
-	std::cout << "Trip done, total fuel used: " << car1.getFuel_consumed() << " gallons" << std::endl;
+	trips[1].changeMPG(18);
+	trips[1].addOdometer(2200);
+	std::cout << "Trip done, total fuel used: " << trips[1].getFuel_consumed() << " gallons" << std::endl;
 
 	return(0);
 }
