@@ -11,13 +11,16 @@
 class Counter{
 	private:
 		int count;
+		int max;
+		bool overflow;
 	public:
+		Counter(int m = 0);
 		void reset();
 		void incr1(void);
 		void incr10(void);
 		void incr100(void);
 		void incr1000(void);
-		bool overflow(void);
+		bool didOverflow(void);
 
 };
 
