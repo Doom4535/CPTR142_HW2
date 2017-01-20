@@ -24,6 +24,8 @@ class Counter{
 
 };
 
+void counter_routine();
+
 
 
 #endif /* LITTLEREDCOUNTER_H_ */

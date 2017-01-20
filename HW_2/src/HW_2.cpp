@@ -10,6 +10,7 @@
 #include <vector>
 #include "odometer.h"
 #include "pizza.h"
+#include "LittleRedCounter.h"
 
 int prob_1(void); // #6
 int prob_2(void); // #7
@@ -80,5 +81,6 @@ int prob_2(void){
 }
 
 int prob_3(void){
-
+	counter_routine();
+	return(0);
 }
