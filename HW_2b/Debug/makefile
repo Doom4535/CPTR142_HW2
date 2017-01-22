@@ -25,11 +25,11 @@ endif
 ifneq ($(strip $(CXX_DEPS)),)
 -include $(CXX_DEPS)
 endif
-ifneq ($(strip $(C_DEPS)),)
--include $(C_DEPS)
-endif
 ifneq ($(strip $(CPP_DEPS)),)
 -include $(CPP_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
 endif
 endif
 
@@ -43,14 +43,14 @@ all: HW_2b
 # Tool invocations
 HW_2b: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: Cross G++ Linker'
+	@echo 'Invoking: MacOS X C++ Linker'
 	g++  -o "HW_2b" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(C_DEPS)$(CPP_DEPS) HW_2b
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(OBJS)$(C_UPPER_DEPS)$(CXX_DEPS)$(CPP_DEPS)$(C_DEPS) HW_2b
 	-@echo ' '
 
 .PHONY: all clean dependents
