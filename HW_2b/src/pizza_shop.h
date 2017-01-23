@@ -11,6 +11,33 @@
 #include <string>
 #include <vector>
 
+/*
+ * UML diagram:
+ *  Pizza class:
+ *  	Private:
+ *  		type
+ *  		size
+ *  		number of toppings
+ *  		price for a small
+ *  		price for a medium
+ *  		price for a large
+ *  		price per topping
+ *  		discount (if any)
+ *  	Public:
+ *  		constructor
+ *  		set pizza type
+ *  		get pizza type
+ *  		set pizza size
+ *  		get pizza size
+ *  		set the number of toppings
+ *  		get the number of toppings
+ *  		get the price of the pizza
+ *  		set the size rate
+ *  		set the topping rate
+ *  		set the discount rate
+ *  		get the discount rate
+ */
+
 class Pizza{
 	private:
 		std::string type;
@@ -44,18 +71,18 @@ class Pizza{
  * 		Private:
  * 			Order contents
  * 		Public:
- * 			create order
+ * 			//create order (using default)
  * 			add items to order
  * 			remove items from order
  * 			view the order (probably include the total price)
  * 			price the order
  * 			reset the order
- * 			place the order
+ * 			//place the order
 */
 
 
 class Order{
-	public:
+	private:
 		std::vector<Pizza> pizza_order;
 	public:
 		//Order();
