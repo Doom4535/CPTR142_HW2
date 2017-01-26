@@ -16,17 +16,22 @@ class Pizza{
 		std::string type;
 		std::string size;
 		int num_toppings;
+		std::vector<std::string> topping_selection;
 		float small_rate; // = 10.00;
 		float medium_rate; // = 14.00;
 		float large_rate; // = 17.00;
 		float topping_rate; // = 2.00;
 		float discount; // = 0.00;	// Percent of (Price - Price * discount) = total
 	public:
-		Pizza(std::string t = "thin crust", std::string s = "medium", int num = 2, float sr = 10, float mr = 14, float lr = 17, float tr = 2, float d = 0);
+		Pizza(std::string t = "thin crust", std::string s = "medium", float sr = 10, float mr = 14, float lr = 17, float tr = 2, float d = 0);
 		void setType(std::string t);
 		std::string getType(void);
 		void setSize(std::string s);
 		std::string getSize(void);
+		void set_Toppings(void);
+		void list_Toppings(void);
+		void reset_Toppings(void);
+		void remove_Last_Topping(void);
 		void set_num_Toppings(int num);
 		int get_num_Toppings(void);
 		float getPrice(void);
@@ -38,7 +43,7 @@ class Pizza{
 
 };
 
-/* Need to keep track of pizza order
+/*
  * UML diagram:
  * 	Order class:
  * 		Private:
@@ -62,7 +67,8 @@ class Order{
 		void addOrder(Pizza pz);
 		void removeOrder(int entry_number);
 		void viewOrder();
-		void priceOrder();
+		int verifyOrder();
+		float priceOrder();
 		void resetOrder();
 };
 
