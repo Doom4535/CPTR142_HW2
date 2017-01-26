@@ -24,8 +24,8 @@ int main() {
 	int i = 0;
 	std::string input;
 	while(loop){
-		Order order;
-		bool choosing = true;
+		Order order;	// create the orer
+		bool choosing = true;	// used to control if in the pizza creation section
 		while(choosing){
 			Pizza pi;
 			std:: cout << "Your order number is: #" << i << std::endl;
@@ -35,7 +35,7 @@ int main() {
 			std::cout << "What size of pizza would you like (small/medium/large)? " << std::endl;
 			std::cin >> input;
 			pi.setSize(input);
-			bool topping_selection = true;
+			bool topping_selection = true;	// used to control if in the topping selection section
 			while(topping_selection){
 				pi.set_Toppings();
 				std::cout << "You have selected the following toppings: ";
