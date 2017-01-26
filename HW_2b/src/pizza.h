@@ -1,12 +1,12 @@
 /*
- * pizza_shop.h
+ * pizza.h
  *
- *  Created on: Jan 21, 2017
+ *  Created on: Jan 25, 2017
  *      Author: aaron
  */
 
-#ifndef PIZZA_SHOP_H_
-#define PIZZA_SHOP_H_
+#ifndef PIZZA_H_
+#define PIZZA_H_
 
 #include <string>
 #include <vector>
@@ -18,6 +18,7 @@
  *  		type
  *  		size
  *  		number of toppings
+ *  		list of toppings
  *  		price for a small
  *  		price for a medium
  *  		price for a large
@@ -29,6 +30,10 @@
  *  		get pizza type
  *  		set pizza size
  *  		get pizza size
+ *  		set the topping list
+ *  		list the toppings
+ *  		reset/clear the toppings
+ *  		remove the last topping
  *  		set the number of toppings
  *  		get the number of toppings
  *  		get the price of the pizza
@@ -70,35 +75,6 @@ class Pizza{
 
 };
 
-/*
- * UML diagram:
- * 	Order class:
- * 		Private:
- * 			Order contents
- * 		Public:
- * 			//create order (using default)
- * 			add items to order
- * 			remove items from order
- * 			view the order (probably include the total price)
- * 			price the order
- * 			reset the order
- * 			//place the order
-*/
 
 
-class Order{
-	private:
-		std::vector<Pizza> pizza_order;
-	public:
-		//Order();
-		void addOrder(Pizza pz);
-		void removeOrder(int entry_number);
-		void viewOrder();
-		int verifyOrder();
-		float priceOrder();
-		void resetOrder();
-};
-
-
-
-#endif /* PIZZA_SHOP_H_ */
+#endif /* PIZZA_H_ */

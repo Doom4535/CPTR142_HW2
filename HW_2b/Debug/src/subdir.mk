@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/HW_2b.cpp \
-../src/pizza_shop.cpp 
+../src/order.cpp \
+../src/pizza.cpp 
 
 OBJS += \
 ./src/HW_2b.o \
-./src/pizza_shop.o 
+./src/order.o \
+./src/pizza.o 
 
 CPP_DEPS += \
 ./src/HW_2b.d \
-./src/pizza_shop.d 
+./src/order.d \
+./src/pizza.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,3 +1,5 @@
-src/HW_2b.o src/HW_2b.o: ../src/HW_2b.cpp ../src/pizza_shop.h
+src/HW_2b.o: ../src/HW_2b.cpp ../src/pizza.h ../src/order.h
 
-../src/pizza_shop.h:
+../src/pizza.h:
+
+../src/order.h:

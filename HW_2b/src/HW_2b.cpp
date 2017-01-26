@@ -9,7 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include "pizza_shop.h"
+#include "pizza.h"
+#include "order.h"
 //using namespace std;
 
 int main() {
@@ -92,6 +93,7 @@ int main() {
 			i++;
 			std::cout << std::endl;
 			std::cout << "Thank you for shopping at Pizza Land" << std::endl << std::endl;
+			std::cin.ignore();
 		}
 	}
 
